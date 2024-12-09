@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Loreto Lob</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+  
+  <!-- Viewport para responsividad -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background-color: #f7f3e4;
+      color: #4a2f1b;  /* Color cálido para texto general */
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      color: #2e0f00;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #c13d12;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #9a5314;
+      border: 2px solid #9a5314;
+      padding: 10px;
+      display: inline-block;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #b88a58;  /* Color cálido pastel para los encabezados */
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    section {
+      margin: 30px 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .bordered {
+      border: 2px solid #9a5314;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 15px 0;
+      background-color: #fff5e1;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style: none;
+      color: #b88a58;  /* Color cálido pastel para los textos de la lista */
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .image-item {
+      text-align: center; /* Alinea el texto debajo de las imágenes */
+      width: 48%; /* Asegura que las imágenes no se desborden en pantallas grandes */
+      margin-bottom: 20px; /* Espaciado entre imágenes */
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%; /* Para evitar que las imágenes se estiren */
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .img1 {
+      display: block;
+      margin: 30px auto;
+      max-width: 80%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .img1:hover {
+      transform: scale(1.05);
+    }
+
+    /* Nueva clase para la imagen `img10` */
+    .img10 {
+      display: block;
+      margin: 30px auto;
+      max-width: 50%; /* Reducir el tamaño aún más */
+      height: auto; /* Mantener la proporción de la imagen */
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave para darle profundidad */
+      transition: transform 0.3s ease;
+    }
+
+    .img10:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact-section button {
+      background-color: #c13d12;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-section button:hover {
+      background-color: #9a5314;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #9a5314;
+    }
+
+    /* Media Queries para dispositivos móviles */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      header h1 {
+        font-size: 2em; /* Título más pequeño */
+      }
+
+      header h2 {
+        font-size: 1.5em; /* Subtítulo más pequeño */
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      .img1 {
+        max-width: 90%;
+      }
+
+      img {
+        max-width: 90%;
+      }
+
+      .image-container {
+        flex-direction: column; /* Apila las imágenes en dispositivos móviles */
+        gap: 10px;
+      }
+
+      .bordered {
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      .contact-section button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+
+      footer {
+        font-size: 0.8em;
+      }
+    }
+
+    /* Media Query para pantallas muy pequeñas (smartphones en modo retrato) */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      header h2 {
+        font-size: 1.2em;
+      }
+
+      section h2 {
+        font-size: 1.5em;
+      }
+
+      section h3 {
+        font-size: 1em;
+      }
+
+      .contact-section p {
+        font-size: 0.9em;
+      }
+
+      .bordered h3 {
+        font-size: 1.1em;
+      }
+
+      .image-container {
+        flex-direction: column; /* Asegura que las imágenes se apilen en pantallas muy pequeñas */
+        gap: 15px;
+      }
+    }
+
+    /* Estilo para centrar la imagen de `img25` */
+    .img25-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .img25-container img {
+      max-width: 70%; /* Imagen más pequeña */
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .img25-container img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Cambios de color cálido pastel para textos específicos */
+    .pastel-text {
+      color: #b88a58;  /* Tono cálido pastel */
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Loreto Lob</h1>
+      <h2>Diseñadora Textil</h2>
+      <h3>Especializada en prendas tejidas con fibras naturales</h3>
+      <!-- Imagen `img10` más pequeña y armoniosa -->
+      <img src="imagenes/img10.jpeg" alt="Imagen de Loreto Lob" class="img10">
+    </header>
+
+    <section>
+      <h2>Sobre mí</h2>
+      <h3>
+        Diseñadora textil con un enfoque en la sostenibilidad y la creatividad.<br>
+        Mis diseños buscan resaltar la belleza de las fibras naturales y la calidez de los colores.
+      </h3>
+    </section>
+
+    <div class="bordered">
+      <h3>Comodidad</h3>
+      <p>Las fibras naturales permiten que tu piel respire, manteniéndote fresco en verano y cálido en invierno.</p>
+    </div>
+
+    <div class="bordered">
+      <h3>Durabilidad</h3>
+      <p>Nuestras prendas están diseñadas para durar, resistiendo el paso del tiempo sin perder su belleza.</p>
+    </div>
+
+    <div class="bordered">
+      <h3>Estilo único</h3>
+      <p>Cada tejido tiene una textura y un acabado único, aportando un toque especial en tu estilo.</p>
+    </div>
+
+    <section>
+      <h2>Variedad de Productos</h2>
+      <ul>
+        <li>Prendas de vestir</li>
+        <li>Textiles para el hogar</li>
+        <li>Accesorios de moda</li>
+        <li>Artículos personalizados</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Mis Diseños</h2>
+      <div class="image-container">
+        <div class="image-item">
+          <img src="imagenes/img5.jpeg" alt="Diseño 1">
+          <div class="bordered"><h3>Tote bag</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img2.jpeg" alt="Diseño 2">
+          <div class="bordered"><h3>Tote Bag Vision</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img3.jpeg" alt="Diseño 3">
+          <div class="bordered"><h3>Bag Cardo</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img4.jpeg" alt="Porta Lámparas Tejidas">
+          <div class="bordered"><h3>Bolso tejido en yute</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img11.jpeg" alt="Remera Natural">
+          <div class="bordered"><h3>Remera Natural</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img7.jpeg" alt="Remera Tierra">
+          <div class="bordered"><h3>Remera Tierra</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img12.jpeg" alt="Lámpara Panal">
+          <div class="bordered"><h3>Lámpara Panal</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img13.jpeg" alt="Lámparas Bells">
+          <div class="bordered"><h3>Lámparas Bells</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img14.jpeg" alt="Porta Lámparas Tejidas">
+          <div class="bordered"><h3>Porta Lámparas Tejidas con Fibras Naturales</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img16.jpeg" alt="Lámpara Medusa">
+          <div class="bordered"><h3>Lámpara Medusa</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img18.jpeg" alt="Deco en Fibras Naturales">
+          <div class="bordered"><h3>Deco en Fibras Naturales</h3></div>
+        </div>
+
+        <div class="image-item">
+          <img src="imagenes/img15.jpeg" alt="Cestas Tejidas">
+          <div class="bordered"><h3>Cestas Tejidas en Algodón Orgánico</h3></div>
+        </div>
+      </div>
+
+      <div class="img25-container">
+        <img src="imagenes/img25.jpeg" alt="Cestas Tejidas">
+      </div>
+
+      <p class="pastel-text">Nuestro compromiso con la naturaleza se refleja en cada uno de nuestros diseños textiles, donde priorizamos la calidad y la responsabilidad ambiental.</p>
+      <p class="pastel-text">Descubre cómo la naturaleza puede transformar tu vida.</p>
+    </section>
+
+    <section>
+      <img src="imagenes/img1.jpeg" class="img1" alt="Imagen destacada">
+    </section>
+
+    <section class="contact-section">
+      <h2>Contacto</h2>
+      <p class="pastel-text">Puedes contactarme a través de mis redes sociales</p>
+      <a href="https://www.instagram.com/loretolob?igsh=eHM2em5kdDQ3NXYy" target="_blank">
+        <button>Instagram</button>
+      </a>
+      <p class="pastel-text">Whatsapp: +54 2664927740</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Loreto Lob | Todos los derechos reservados</p>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
